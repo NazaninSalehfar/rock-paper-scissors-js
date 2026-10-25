@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="game">
+      <h1 class="title">Rock Paper Scissors</h1>
+      <p class="subtitle">First to 5 points wins.</p>
+
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div class="score score--player">
+          <span class="score__name">You</span>
+          <span class="score__value" id="player-score">0</span>
+        </div>
+        <div class="score score--computer">
+          <span class="score__name">Computer</span>
+          <span class="score__value" id="computer-score">0</span>
+        </div>
+      </section>
+
+      <section class="arena" aria-label="Last round">
+        <div class="hand" id="player-hand" aria-hidden="true">❔</div>
+        <div class="hand" id="computer-hand" aria-hidden="true">❔</div>
+      </section>
+
+      <p class="message" id="message" role="status" aria-live="polite">
+        Pick a move to start.
+      </p>
+
+      <section class="choices" id="choices" aria-label="Your move">
+        <button class="choice" data-choice="rock" type="button">
+          <span class="choice__icon" aria-hidden="true">✊</span>Rock
+        </button>
+        <button class="choice" data-choice="paper" type="button">
+          <span class="choice__icon" aria-hidden="true">✋</span>Paper
+        </button>
+        <button class="choice" data-choice="scissors" type="button">
+          <span class="choice__icon" aria-hidden="true">✌️</span>Scissors
+        </button>
+      </section>
+
+      <button class="restart" id="restart" type="button" hidden>
+        Play again
+      </button>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
